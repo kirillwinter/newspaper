@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto', serif;
+}
+
+body {
+	background-color:#fafafa;
+}
+
+header {
+	width: 100%;
+	padding: 10px 0.5% 0px 0.5%;
+	background-color: transparent;
+	float: left;
+	position: fixed;
+}
+
+header #logo {
+	color: #000;
+	cursor: pointer;
+}
+
+header #logo span{
+	font-size: 1.7em;
+	line-height: 45px;
+	margin-left: 40px;
+}
+
+/* Положение при масштабировании */
+
+@media (min-width: 701px) {
+	#logo {
+		float: left;
+		width: 30%;
+		font-size: 1.1em;
+	}
+
+	#about {
+		float: right;
+		width: 50%;
+	}
+}
+
+@media (max-width: 700px) {
+	#logo {
+		margin-top: 15px;
+		width: 100%;
+		font-size: 1.5em;
+	}
+
+	#about {
+		float: left;
+		width: 100%;
+	}
+}
+
+#about {
+	text-align: center;
+	font-size: 1em;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+
+#about > a {color: #000}
+
+#about > a:hover {
+	color: darkgray;
+	text-decoration: underline;
+}
+
+/* Cтили для постоянной шапки */
+
+.fixed {
+	z-index: 5000;
+	background-color: #000;
+	border-bottom: 1px solid white;
+}
+
+.header .fixed #logo {
+	color:	white;
+}
+
+.fixed #about a {color: white}
+.fixed #logo {color: white}
+.fixed #about a:hover {color: gold}
+
+/* Описание заголовка статей */
+
+#top {
+	width: 100%;
+	height: 30%;
+	text-align: center;
+}
+
+@media (min-width: 1001px){
+	#top {
+		font-size: 1.2em;
+		/* height: 20%; */
+	}
+}
+
+@media (max-width: 1000px){
+	#top {
+		font-size: 0.7em;
+		padding-top: 30%;
+		/* height: 50%; */
+	}
+}
+
+
+#top h1{
+	padding-top: 7%;
+
+}
+
+/* Описание блок статей */
+
+#main {
+	padding: 50px 10%;
+	width: 80%;
+	float: left;
+	background-color: silver;
+}
+
+@media (max-widht: 700px){
+	#main div{
+		width: 98%!important;
+		margin-right: 2%;
+		float: left;
+	}
+}
+
+#main h2 {
+	text-align: center;
+}
+
+#main div {
+	width: 46%;
+	margin-right: 4%;
+	float: left;
+}
+
+#main img {
+	width: 100%;
+	float: left;
+	padding-top: 2%;
+	padding-block-end: 10px;
+}
+
+/* Описание подвала */
+
+#footer {
+	width: 100%;
+	/* padding: 100px 0.5% 0px 0.5%; */
+
+	marker-end: 10%;
+	padding-block-start: 20px;
+	background-color: transparent;
+	float: right;
+	text-align: center;
+	position: relative;
+}
